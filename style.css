@@ -1,0 +1,378 @@
+:root {
+    --brand-900: #5b2134;
+    --brand-700: #7b2c45;
+    --brand-500: #a64b61;
+    --brand-soft: #f5e9ed;
+    --surface: #ffffff;
+    --text: #34242a;
+    --text-muted: #74676c;
+    --border: #e8dce0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f2f4 0%, #efe3e7 100%);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", Tahoma, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.app-shell {
+    max-width: 1080px;
+}
+
+.page-header {
+    padding: 2rem 2.25rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(120deg, var(--brand-900), var(--brand-700));
+    color: var(--surface);
+    box-shadow: 0 0.75rem 1.75rem rgba(91, 33, 52, 0.18);
+}
+
+.header-label {
+    display: inline-block;
+    margin-bottom: 0.65rem;
+    color: #f0cbd5;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.page-header h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 600;
+}
+
+.page-header p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.summary-card {
+    display: flex;
+    min-height: 100px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--brand-700);
+    border-radius: 0.7rem;
+    background: var(--surface);
+    box-shadow: 0 0.3rem 0.9rem rgba(91, 33, 52, 0.06);
+}
+
+.summary-card span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.summary-card strong {
+    color: var(--brand-900);
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.summary-open {
+    border-left-color: var(--brand-500);
+}
+
+.summary-progress {
+    border-left-color: #b98535;
+}
+
+.summary-overdue {
+    border-left-color: #bd4750;
+}
+
+.custom-form-wrapper {
+    position: relative;
+    z-index: 0;
+    max-width: 800px;
+    margin: 4rem auto 3rem;
+}
+
+.form-backdrop {
+    position: absolute;
+    z-index: -1;
+    inset: 20px -14px -14px;
+    border-radius: 0.75rem;
+    background: rgba(123, 44, 69, 0.2);
+}
+
+.custom-card {
+    position: relative;
+    overflow: visible;
+    border-radius: 0 0.75rem 0.75rem 0.75rem;
+    background: var(--surface);
+    box-shadow: 0 0.7rem 2rem rgba(52, 36, 42, 0.16);
+}
+
+.custom-card-body {
+    padding: 3.25rem 2.5rem 1.5rem;
+}
+
+.form-tab {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    display: flex;
+    height: 44px;
+    align-items: center;
+    padding: 0 1.25rem;
+    border-radius: 0.65rem 0.65rem 0 0;
+    background: var(--surface);
+    color: var(--brand-900);
+}
+
+.form-tab h2 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.window-dots {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    gap: 0.35rem;
+}
+
+.window-dots span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border: 1px solid var(--brand-500);
+    border-radius: 50%;
+}
+
+.custom-card .form-label {
+    margin-bottom: 0.4rem;
+    color: var(--brand-900);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.custom-card .form-control,
+.custom-card .form-select {
+    min-height: 2.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    background-color: #fcfafb;
+    color: var(--text);
+    box-shadow: none;
+}
+
+.custom-card textarea.form-control {
+    min-height: 5rem;
+}
+
+.custom-card .form-control:focus,
+.custom-card .form-select:focus {
+    border-color: var(--brand-500);
+    background-color: var(--surface);
+    box-shadow: 0 0 0 0.2rem rgba(166, 75, 97, 0.16);
+}
+
+.custom-card .form-text {
+    color: var(--text-muted);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit-full {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 0;
+    background: var(--brand-700);
+    color: var(--surface);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-submit-full:last-child {
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.btn-submit-full:hover,
+.btn-submit-full:focus-visible {
+    background: var(--brand-900);
+}
+
+.btn-submit-full:focus-visible {
+    outline: 3px solid rgba(166, 75, 97, 0.35);
+    outline-offset: 2px;
+}
+
+.btn-cancel-full {
+    background: #74676c;
+}
+
+.filter-panel,
+.app-card {
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--surface);
+    box-shadow: 0 0.35rem 1rem rgba(91, 33, 52, 0.06);
+}
+
+.filter-panel {
+    padding: 1.25rem 1.5rem 0.75rem;
+}
+
+.filter-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.filter-heading h2 {
+    margin: 0;
+    color: var(--brand-900);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.filter-heading span {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.filter-panel .form-control,
+.filter-panel .form-select {
+    border-color: var(--border);
+}
+
+.filter-panel .form-control:focus,
+.filter-panel .form-select:focus {
+    border-color: var(--brand-500);
+    box-shadow: 0 0 0 0.2rem rgba(166, 75, 97, 0.16);
+}
+
+.ticket-list {
+    border: 0;
+}
+
+.ticket-list-item {
+    margin-bottom: 0.75rem;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--border) !important;
+    border-left: 4px solid var(--brand-500) !important;
+    border-radius: 0.65rem !important;
+    background: var(--surface);
+    box-shadow: 0 0.25rem 0.75rem rgba(91, 33, 52, 0.06);
+}
+
+.ticket-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 1.25rem;
+}
+
+.ticket-row.ticket-overdue {
+    border-left: 3px solid #bd4750;
+}
+
+.ticket-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.ticket-heading {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+}
+
+.ticket-title {
+    margin: 0;
+    color: var(--brand-900);
+    font-size: 1.05rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.ticket-category {
+    color: var(--brand-500);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.ticket-description {
+    margin: 0.4rem 0 0.65rem;
+    color: #55484d;
+    overflow-wrap: anywhere;
+}
+
+.ticket-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.ticket-actions {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.ticket-deadline {
+    margin: 0.65rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.loading-spinner {
+    color: var(--brand-700);
+}
+
+@media (max-width: 575.98px) {
+    .page-header {
+        padding: 1.5rem;
+    }
+
+    .custom-card-body {
+        padding: 3rem 1.25rem 1rem;
+    }
+
+    .form-backdrop {
+        right: -8px;
+        bottom: -8px;
+    }
+
+    .filter-panel {
+        padding: 1.15rem 1rem 0.65rem;
+    }
+
+    .filter-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .ticket-row {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.9rem;
+        padding: 1rem;
+    }
+
+    .ticket-actions .btn {
+        flex: 1;
+    }
+}
